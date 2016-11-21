@@ -2,33 +2,49 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.secuso.heliosverifier">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.secuso.privacyFriendlyCodeScanner"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/my_paths" />
+        </provider>
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="org.secuso.heliosverifier.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ScanActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".ResultActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
 
+        <activity
+            android:name="org.secuso.heliosverifier.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="org.secuso.heliosverifier.MyCaptureActivity"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:icon="@mipmap/ic_launcher">
+        </activity>
     </application>
 
 </manifest>
