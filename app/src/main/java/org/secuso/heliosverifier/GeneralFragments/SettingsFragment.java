@@ -5,6 +5,10 @@ import android.preference.PreferenceFragment;
 
 import org.secuso.heliosverifier.R;
 
+/**
+ * Basis taken from https://github.com/SecUSo/privacy-friendly-qr-scanner
+ */
+
 public class SettingsFragment extends PreferenceFragment {
     public SettingsFragment() {
     }

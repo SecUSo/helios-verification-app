@@ -29,6 +29,9 @@ import org.secuso.heliosverifier.GeneralFragments.SettingsFragment;
 
 import java.util.LinkedList;
 
+/**
+ * Basis taken from https://github.com/SecUSo/privacy-friendly-qr-scanner
+ */
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 

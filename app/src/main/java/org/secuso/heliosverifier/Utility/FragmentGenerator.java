@@ -11,7 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by Philipp on 14/09/2015.
+ * Basis taken from https://github.com/SecUSo/privacy-friendly-qr-scanner
  */
 public class FragmentGenerator {
     public static Fragment getFragment(IntentResult result) {

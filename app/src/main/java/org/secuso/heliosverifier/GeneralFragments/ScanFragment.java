@@ -23,7 +23,7 @@ import org.secuso.heliosverifier.R;
 import org.secuso.heliosverifier.Utility.FragmentGenerator;
 
 /**
- * Created by Philipp on 12.09.2015.
+ * Basis taken from https://github.com/SecUSo/privacy-friendly-qr-scanner
  */
 public class ScanFragment extends Fragment {
     private String toast;

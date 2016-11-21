@@ -1,10 +1,7 @@
 package org.secuso.heliosverifier.GeneralFragments;
 
 import android.app.Fragment;
-import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,15 +9,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.secuso.heliosverifier.MainActivity;
 import org.secuso.heliosverifier.R;
 
 /**
  * Basis taken from https://github.com/SecUSo/privacy-friendly-qr-scanner
  */
-public class IntroFragment extends Fragment {
+public class HelpFragment extends Fragment {
 
-    public IntroFragment() {
+    public HelpFragment() {
     }
 
     @Override
@@ -30,7 +26,7 @@ public class IntroFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_intro, container, false);
 
@@ -45,18 +41,8 @@ public class IntroFragment extends Fragment {
         bull4.setText(Html.fromHtml("&#8226;&nbsp;&nbsp;"));
 
         final Button confirm = (Button) rootView.findViewById(R.id.confirmIntro);
-        confirm.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
-                sharedPref.edit().putBoolean("firstVisit", false).commit();
-                confirm.setBackgroundColor(Color.parseColor("#ff33b5e5"));
-                ((MainActivity)getActivity()).selectItem(0,false);
-            }
-
-
-        });
+        confirm.setVisibility(View.INVISIBLE);
+        confirm.setEnabled(false);
         return rootView;
     }
 }
