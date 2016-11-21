@@ -9,7 +9,7 @@
     android:background="#FFFFFF"
     android:paddingBottom="2dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.secuso.privacyFriendlyCodeScanner.MainActivity"
+    tools:context="org.secuso.heliosverifier.MainActivity"
     tools:showIn="@layout/app_bar_main"
     android:orientation="vertical"
     android:fillViewport="true"

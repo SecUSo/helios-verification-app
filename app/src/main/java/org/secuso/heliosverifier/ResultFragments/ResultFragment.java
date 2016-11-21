@@ -3,6 +3,7 @@ package org.secuso.heliosverifier.ResultFragments;
 import android.app.Fragment;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +18,6 @@ import org.secuso.heliosverifier.R;
 
 public class ResultFragment extends Fragment {
     protected String result;
-    protected Bitmap bitmap;
-    protected String toast = "erfolgreich";
-    protected boolean fromHistory = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,24 +27,37 @@ public class ResultFragment extends Fragment {
         rootView = setResult(rootView);
 
         TextView resultText = (TextView) rootView.findViewById(R.id.result_field_text);
-        resultText.setText(this.result);
+
+        String display = processResult(result);
+
+        resultText.setText(display);
 
         return rootView;
     }
-
-    /*
-        To be implemented
-     */
-    protected void createBitmap(){}
 
     protected View setResult(View view) {
         result  = getArguments().getString("result_content");
         return view;
     }
 
-    protected void displayToast() {
-        if(getActivity() != null && toast != null) {
-            Toast.makeText(getActivity(), toast, Toast.LENGTH_LONG).show();
+    protected String processResult(String result) {
+
+        Log.d("Result from QR", result);
+
+        switch(result) {
+            case "1": return "Candidate 1";
+            case "2": return "Candidate 2";
+            case "3": return "Candidate 3";
+            case "4": return "Candidate 4";
+            case "5": return "Candidate 5";
+            case "6": return "Candidate 6";
+            case "7": return "Candidate 7";
+            case "8": return "Candidate 8";
+            case "9": return "Candidate 9";
+            case "10": return "Candidate 10";
         }
+        return "Not voted";
     }
+
+
 }
