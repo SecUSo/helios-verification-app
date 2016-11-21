@@ -2,18 +2,33 @@ package org.secuso.heliosverifier.ResultFragments;
 
 import android.app.Fragment;
 import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import org.secuso.heliosverifier.Utility.History;
+import org.secuso.heliosverifier.R;
 
-public abstract class ResultFragment extends Fragment {
+public class ResultFragment extends Fragment {
     protected String result;
     protected Bitmap bitmap;
     protected String toast = "erfolgreich";
     protected boolean fromHistory = false;
 
-    public ResultFragment (){}
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_text, container, false);
+
+        rootView = setResult(rootView);
+
+        TextView resultText = (TextView) rootView.findViewById(R.id.result_field_text);
+        resultText.setText(this.result);
+
+        return rootView;
+    }
 
     /*
         To be implemented
@@ -23,11 +38,6 @@ public abstract class ResultFragment extends Fragment {
     protected View setResult(View view) {
         result  = getArguments().getString("result_content");
         return view;
-    }
-
-    protected void saveScanned(boolean trust) {
-        if(!fromHistory)
-            History.saveScan(result, trust, getActivity());
     }
 
     protected void displayToast() {

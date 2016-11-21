@@ -21,14 +21,12 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.secuso.heliosverifier.GeneralFragments.AboutFragment;
 import org.secuso.heliosverifier.GeneralFragments.HelpFragment;
 import org.secuso.heliosverifier.GeneralFragments.ScanFragment;
 import org.secuso.heliosverifier.GeneralFragments.SettingsFragment;
 
-import java.io.File;
 import java.util.LinkedList;
 
 
