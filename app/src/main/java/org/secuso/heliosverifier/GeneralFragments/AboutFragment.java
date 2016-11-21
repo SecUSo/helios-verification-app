@@ -11,7 +11,7 @@ import android.widget.TextView;
 import org.secuso.heliosverifier.R;
 
 /**
- * Created by Philipp on 28.09.2015.
+ * Basis taken from https://github.com/SecUSo/privacy-friendly-qr-scanner
  */
 public class AboutFragment extends Fragment {
 
