@@ -19,8 +19,7 @@
         android:layout_below="@+id/textLink"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Example application"
-        android:textIsSelectable="true"
+        android:text="No Candidate"
         android:textSize="24sp" />
 
     <Button
@@ -28,7 +27,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/successButton"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_fullwidth"
         android:padding="@dimen/activity_horizontal_margin"
@@ -42,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/alarmButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_fullwidth"
         android:padding="@dimen/activity_horizontal_margin"
         android:text="I have voted for this candidate"
