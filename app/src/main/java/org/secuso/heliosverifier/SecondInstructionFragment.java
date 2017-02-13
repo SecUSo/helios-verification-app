@@ -25,7 +25,6 @@ public class SecondInstructionFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_second, container, false);
         container.removeAllViews();
 
-
         Button buttonScan = (Button) rootView.findViewById(R.id.buttonScan);
 
         buttonScan.setOnClickListener(new View.OnClickListener() {

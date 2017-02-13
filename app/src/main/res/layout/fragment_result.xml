@@ -1,8 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#FFFFFF"
-    android:orientation="vertical"
     android:padding="16dp">
 
     <TextView
@@ -11,48 +10,44 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Everything has worked perfectly in case you have voted for:"
-        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textLink"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="Example application"
         android:textIsSelectable="true"
         android:textSize="24sp" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/alarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/successButton"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_fullwidth"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="I did not vote for this candidate"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/successButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20sp"
-            android:background="@drawable/button_fullwidth"
-            android:padding="@dimen/activity_horizontal_margin"
-            android:textAllCaps="false"
-            android:text="I have voted for this candidate"
-            android:textColor="@color/white" />
+    <Button
+        android:id="@+id/successButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/alarmButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/button_fullwidth"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="I have voted for this candidate"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/alarmButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/successButton"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20sp"
-            android:textAllCaps="false"
-            android:background="@drawable/button_fullwidth"
-            android:padding="@dimen/activity_horizontal_margin"
-            android:text="I did not vote for this candidate"
-            android:textColor="@color/white" />
 
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

@@ -49,12 +49,11 @@ public class FirstInstructionFragment extends Fragment {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
-                toast = "Cancelled from fragment";
+                toast = "Scan cancelled";
+                displayToast();
             } else {
                 openNewFragment();
-                toast = "Scanned from fragment: " + result.getContents();
             }
-            displayToast();
         }
     }
 

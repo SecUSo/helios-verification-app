@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -23,6 +24,9 @@ public class ResultFragment extends Fragment {
 
         TextView candidateTextView = (TextView) rootView.findViewById(R.id.resultTextView);
         candidateTextView.setText(processResult(candidate));
+
+        Button alarmButton = (Button) rootView.findViewById(R.id.alarmButton);
+        Button successButton = (Button) rootView.findViewById(R.id.successButton);
 
         return rootView;
     }

@@ -8,7 +8,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Anleitung" />
+        android:text="Thanks for verifying your vote! Start by scanning the QR Code representing your check code on the review page."
+        android:gravity="center"
+        android:textSize="20sp"
+        />
 
     <Button
         android:id="@+id/buttonScan"

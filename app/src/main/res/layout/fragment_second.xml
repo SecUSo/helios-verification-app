@@ -11,17 +11,25 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Thanks for scanning the Check Code!" />
+        android:gravity="center"
+        android:text="The scanning of the check code was successful!"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Proceed by choosing the verification option on the review page." />
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:text="Proceed by choosing the verification option on the review page."
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Follow the instructions on the voting website." />
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:text="Follow the instructions on the voting website."
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/buttonScan"
