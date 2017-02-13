@@ -42,21 +42,44 @@ public class ResultFragment extends Fragment {
 
     protected String processResult(String result) {
 
-        Log.d("Result from QR", result);
+        String temp = "Not voted";
 
-        switch(result) {
-            case "1": return "Candidate 1";
-            case "2": return "Candidate 2";
-            case "3": return "Candidate 3";
-            case "4": return "Candidate 4";
-            case "5": return "Candidate 5";
-            case "6": return "Candidate 6";
-            case "7": return "Candidate 7";
-            case "8": return "Candidate 8";
-            case "9": return "Candidate 9";
-            case "10": return "Candidate 10";
-        }
-        return "Not voted";
+        if (result.length() > 43) {
+
+            String candidateCode = result.substring(49, 51);
+
+            Log.d("Code", candidateCode);
+            Log.d("Vote", result);
+
+            switch(candidateCode) {
+                case "00":
+                    temp = "Empty Vote";
+                case "01":
+                    temp = "Candidate 1";
+                case "02":
+                    temp = "Candidate 2";
+                case "03":
+                    temp = "Candidate 3";
+                case "04":
+                    temp = "Candidate 4";
+                case "05":
+                    temp = "Candidate 5";
+                case "06":
+                    temp = "Candidate 6";
+                case "07":
+                    temp = "Candidate 7";
+                case "08":
+                    temp = "Candidate 8";
+                case "09":
+                    temp = "Candidate 9";
+                case "10":
+                    temp = "Candidate 10";
+            }
+        } else {
+            Log.d("HASH", result);
+            }
+
+        return temp;
     }
 
 
