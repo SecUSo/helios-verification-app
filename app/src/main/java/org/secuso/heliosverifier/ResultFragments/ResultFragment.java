@@ -42,7 +42,7 @@ public class ResultFragment extends Fragment {
 
     protected String processResult(String result) {
 
-        String temp = "Not voted";
+        String temp = "Empty Vote";
 
         if (result.length() > 43) {
 

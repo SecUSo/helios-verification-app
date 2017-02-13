@@ -23,7 +23,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import org.secuso.heliosverifier.GeneralFragments.AboutFragment;
-import org.secuso.heliosverifier.GeneralFragments.HelpFragment;
 import org.secuso.heliosverifier.GeneralFragments.ScanFragment;
 import org.secuso.heliosverifier.GeneralFragments.SettingsFragment;
 
@@ -80,8 +79,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 backStack.push(2);
             else if (temp instanceof AboutFragment)
                 backStack.push(3);
-            else if (temp instanceof HelpFragment)
-                backStack.push(4);
 
         getFragmentManager().beginTransaction().replace(R.id.container, frag).addToBackStack("").commit();
     }
@@ -195,9 +192,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_about:
                 selectItem(3, false);
                 break;
-            case R.id.nav_help:
-                selectItem(4, false);
-                break;
             case R.id.nav_settings:
                 selectItem(2, false);
                 break;
@@ -226,9 +220,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (position == 3) {
             switchToFragment(new AboutFragment(), back);
             this.setTitle(R.string.action_about);
-        } else if (position == 4) {
-            switchToFragment(new HelpFragment(), false);
-            this.setTitle(R.string.action_help);
         }
     }
 }

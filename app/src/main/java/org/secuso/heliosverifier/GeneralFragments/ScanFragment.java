@@ -14,8 +14,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -33,10 +31,8 @@ import static android.os.Build.VERSION.SDK_INT;
  * Basis taken from https://github.com/SecUSo/privacy-friendly-qr-scanner
  */
 public class ScanFragment extends Fragment {
-    private String toast;
 
-    public ScanFragment() {
-    }
+    private String toast;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -46,7 +42,7 @@ public class ScanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_scan, container, false);
 
         ImageView image = (ImageView) view.findViewById(R.id.imageView1);
         image.setMinimumWidth(getResources().getDisplayMetrics().widthPixels);

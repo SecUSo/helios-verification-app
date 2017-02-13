@@ -13,12 +13,7 @@
         android:checkableBehavior="all">
         <item
             android:id="@+id/nav_settings"
-
             android:title="@string/action_settings" />
-        <item
-            android:id="@+id/nav_help"
-            android:icon="@drawable/ic_menu_help"
-            android:title="@string/action_help" />
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_menu_info"
