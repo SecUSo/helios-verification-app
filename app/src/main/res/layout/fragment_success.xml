@@ -22,7 +22,7 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/imageView"
             android:gravity="center"
-            android:text="The verification was successful!"
+            android:text="@string/success_heading"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:gravity="center"
-        android:text="Please follow the instructions at the voting website."
+        android:text="@string/success_description"
         android:textSize="20sp" />
 
     <Button
@@ -44,7 +44,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_fullwidth"
         android:padding="@dimen/activity_horizontal_margin"
-        android:text="Start new verification"
+        android:text="@string/success_new_button"
         android:textColor="@color/white" />
 
     <Button
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_fullwidth"
         android:padding="@dimen/activity_horizontal_margin"
-        android:text="Close application"
+        android:text="@string/success_close_button"
         android:textColor="@color/white"
         android:layout_above="@+id/newButton"
         android:layout_centerHorizontal="true"

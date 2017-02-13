@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Thanks for verifying your vote!"
+        android:text="@string/first_headline"
         android:textSize="20sp" />
 
     <TextView
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:gravity="center"
-        android:text="Start by scanning the QR Code representing your check code on the review page."
+        android:text="@string/first_description"
         android:textSize="20sp" />
 
     <Button
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:background="@drawable/button_fullwidth"
-        android:text="Scan Check Code"
+        android:text="@string/first_scan_button"
         android:textColor="@color/white" />
 
 </LinearLayout>

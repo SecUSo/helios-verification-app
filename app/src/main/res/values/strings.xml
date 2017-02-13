@@ -1,9 +1,33 @@
 <resources>
     <string name="app_name">Helios Verifier</string>
 
-    <!--###ABOUT###-->
+    <!--###FIRST###-->
+    <string name="first_headline">Thanks for verifying your vote!</string>
+    <string name="first_description">Start by scanning the QR Code representing your check code on the review page.</string>
+    <string name="first_scan_button">Scan Check Code</string>
 
-    <!-- ###DRAWER###-->
+    <!--###SECOND###-->
+    <string name="second_headline">The scanning of the check code was successful!</string>
+    <string name="second_description">Proceed by choosing the verification option on the review page.</string>
+    <string name="second_description2">Follow the instructions on the voting website.</string>
+    <string name="second_scan_button">Scan Vote Code</string>
 
-    <!-- ### WELCOME DIALOG ### -->
+    <!--###RESULT###-->
+    <string name="result_alarm_button">I did not vote for this candidate</string>
+    <string name="result_success_button">I have voted for this candidate</string>
+    <string name="result_candidate_placeholder">No Candidate</string>
+    <string name="result_heading">Everything has worked perfectly in case you have voted for:</string>
+
+    <!--###ALARM###-->
+    <string name="alarm_heading">The verification uncovered a problem!</string>
+    <string name="alarm_hint">Please notify the examiner.</string>
+    <string name="alarm_close_button">Close application</string>
+    <string name="alarm_new_button">Start new verification</string>
+
+    <!--###SUCCESS###-->
+    <string name="success_heading">The verification was successful!</string>
+    <string name="success_description">Please follow the instructions at the voting website.</string>
+    <string name="success_close_button">Close application</string>
+    <string name="success_new_button">Start new verification</string>
+
 </resources>

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="The scanning of the check code was successful!"
+        android:text="@string/second_headline"
         android:textSize="20sp" />
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:gravity="center"
-        android:text="Proceed by choosing the verification option on the review page."
+        android:text="@string/second_description"
         android:textSize="20sp" />
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:gravity="center"
-        android:text="Follow the instructions on the voting website."
+        android:text="@string/second_description2"
         android:textSize="20sp" />
 
     <Button
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:background="@drawable/button_fullwidth"
-        android:text="Scan Vote Code"
+        android:text="@string/second_scan_button"
         android:textColor="@color/white" />
 
 </LinearLayout>

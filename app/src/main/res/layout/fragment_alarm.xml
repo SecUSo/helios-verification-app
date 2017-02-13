@@ -22,7 +22,7 @@
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/imageView"
             android:gravity="center"
-            android:text="The verification uncovered a problem!"
+            android:text="@string/alarm_heading"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -33,7 +33,7 @@
         android:layout_below="@+id/topline"
         android:layout_marginTop="20sp"
         android:gravity="center"
-        android:text="Please notice the examiner."
+        android:text=""
         android:textSize="20sp" />
 
     <Button
@@ -44,7 +44,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_fullwidth"
         android:padding="@dimen/activity_horizontal_margin"
-        android:text="Start new verification"
+        android:text="@string/alarm_new_button"
         android:textColor="@color/white" />
 
     <Button
@@ -56,7 +56,7 @@
         android:layout_marginBottom="11dp"
         android:background="@drawable/button_fullwidth"
         android:padding="@dimen/activity_horizontal_margin"
-        android:text="Close application"
+        android:text="@string/alarm_close_button"
         android:textColor="@color/white" />
 
 </RelativeLayout>

@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Everything has worked perfectly in case you have voted for:"
+        android:text="@string/result_heading"
         android:textSize="20sp" />
 
     <TextView
@@ -19,7 +19,7 @@
         android:layout_below="@+id/textLink"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical|center_horizontal"
-        android:text="No Candidate"
+        android:text="@string/result_candidate_placeholder"
         android:textSize="24sp" />
 
     <Button
@@ -30,7 +30,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_fullwidth"
         android:padding="@dimen/activity_horizontal_margin"
-        android:text="I did not vote for this candidate"
+        android:text="@string/result_alarm_button"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 
@@ -43,7 +43,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/button_fullwidth"
         android:padding="@dimen/activity_horizontal_margin"
-        android:text="I have voted for this candidate"
+        android:text="@string/result_success_button"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 
