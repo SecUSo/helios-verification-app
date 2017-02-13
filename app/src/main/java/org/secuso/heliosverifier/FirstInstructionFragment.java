@@ -1,9 +1,8 @@
 package org.secuso.heliosverifier;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,50 +12,62 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-/**
- * Created by yonjuni on 13.02.17.
- */
-
 public class FirstInstructionFragment extends Fragment {
 
-    private IntentIntegrator qrScan;
+    private String toast;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_first, container, false);
-        container.removeAllViews();
-
-        qrScan = new IntentIntegrator(getActivity());
 
         Button buttonScan = (Button) rootView.findViewById(R.id.buttonScan);
 
         buttonScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                qrScan.initiateScan();
+                scanFromFragment();
             }
         });
 
         return rootView;
     }
 
-    //Getting the scan results
+    public void scanFromFragment() {
+        IntentIntegrator.forSupportFragment(this).initiateScan();
+    }
+
+    private void displayToast() {
+        if (getActivity() != null && toast != null) {
+            Toast.makeText(getActivity(), toast, Toast.LENGTH_LONG).show();
+            toast = null;
+        }
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
-                Toast.makeText(getActivity(), "Result Not Found", Toast.LENGTH_LONG).show();
+                toast = "Cancelled from fragment";
             } else {
-                if (result.getContents().length() < 43) {
-                    final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.activity_main, new FirstInstructionFragment(), "EnterPinFragment");
-                    fragmentTransaction.addToBackStack(null);
-                    fragmentTransaction.commit();
-                }
+                openNewFragment();
+                toast = "Scanned from fragment: " + result.getContents();
             }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
+
+            // At this point we may or may not have a reference to the activity
+            displayToast();
         }
+
+        super.onActivityResult(requestCode, resultCode, data);
+
+    }
+
+    public void openNewFragment() {
+        SecondInstructionFragment secondInstructionFragment = new SecondInstructionFragment();
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(R.id.activity_main, secondInstructionFragment, "SecondInstructionFragment")
+                .addToBackStack(null)
+                .commit();
     }
 }
