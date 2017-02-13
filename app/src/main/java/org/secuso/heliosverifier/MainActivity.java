@@ -58,14 +58,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mHandler = new Handler();
 
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
-
-        if (prefs.getBoolean("firstVisit", true)) {
-            WelcomeDialog welcomeDialog = new WelcomeDialog();
-            welcomeDialog.show(getFragmentManager(), "WelcomeDialog");
-        } else if (savedInstanceState == null) {
-            selectItem(0, false);
-        }
         overridePendingTransition(0, 0);
     }
 
@@ -77,46 +69,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public static class WelcomeDialog extends DialogFragment {
-
-        @Override
-        public void onAttach(Activity activity) {
-            super.onAttach(activity);
-        }
-
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-
-            LayoutInflater i = getActivity().getLayoutInflater();
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setView(i.inflate(R.layout.welcome_dialog, null));
-            builder.setIcon(R.mipmap.ic_launcher);
-            builder.setTitle(getActivity().getString(R.string.welcome));
-            builder.setPositiveButton(getActivity().getString(R.string.ok), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    ((MainActivity) getActivity()).goToNavigationItem(R.id.nav_scan);
-                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(((MainActivity) getActivity()).getApplicationContext());
-                    SharedPreferences.Editor editor = prefs.edit();
-                    editor.putBoolean("firstVisit", false);
-                    editor.commit();
-                }
-            });
-            builder.setNegativeButton(getActivity().getString(R.string.viewhelp), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    ((MainActivity) getActivity()).goToNavigationItem(R.id.nav_help);
-                    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(((MainActivity) getActivity()).getApplicationContext());
-                    SharedPreferences.Editor editor = prefs.edit();
-                    editor.putBoolean("firstVisit", false);
-                    editor.commit();
-                }
-            });
-
-            return builder.create();
-        }
     }
 
     public void switchToFragment(Fragment frag, boolean back) {
