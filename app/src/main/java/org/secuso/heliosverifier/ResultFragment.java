@@ -41,6 +41,19 @@ public class ResultFragment extends Fragment {
             }
         });
 
+        alarmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                AlarmFragment alarmFragment = new AlarmFragment();
+
+                fragmentTransaction.replace(R.id.activity_main, alarmFragment, "alarmFragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+
         return rootView;
     }
 
