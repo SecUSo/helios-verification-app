@@ -19,25 +19,27 @@ import com.google.zxing.integration.android.IntentResult;
  */
 
 public class SecondInstructionFragment extends Fragment {
-    private IntentIntegrator qrScan;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_first, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_second, container, false);
         container.removeAllViews();
 
-        qrScan = new IntentIntegrator(getActivity());
 
         Button buttonScan = (Button) rootView.findViewById(R.id.buttonScan);
 
         buttonScan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                qrScan.initiateScan();
+                scanFromFragment();
             }
         });
 
         return rootView;
+    }
+
+    public void scanFromFragment() {
+        IntentIntegrator.forSupportFragment(this).initiateScan();
     }
 
     @Override

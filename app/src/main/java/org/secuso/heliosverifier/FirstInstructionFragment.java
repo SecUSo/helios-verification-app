@@ -54,13 +54,8 @@ public class FirstInstructionFragment extends Fragment {
                 openNewFragment();
                 toast = "Scanned from fragment: " + result.getContents();
             }
-
-            // At this point we may or may not have a reference to the activity
             displayToast();
         }
-
-        super.onActivityResult(requestCode, resultCode, data);
-
     }
 
     public void openNewFragment() {
