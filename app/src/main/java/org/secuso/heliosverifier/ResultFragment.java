@@ -2,6 +2,7 @@ package org.secuso.heliosverifier;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,18 @@ public class ResultFragment extends Fragment {
 
         Button alarmButton = (Button) rootView.findViewById(R.id.alarmButton);
         Button successButton = (Button) rootView.findViewById(R.id.successButton);
+
+        successButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                SuccessFragment successFragment = new SuccessFragment();
+
+                fragmentTransaction.replace(R.id.activity_main, successFragment, "successFragment");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
 
         return rootView;
     }
