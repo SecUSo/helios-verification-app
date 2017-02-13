@@ -14,6 +14,9 @@
         android:id="@+id/buttonScan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Scan Check Code" />
+        android:layout_marginTop="20sp"
+        android:background="@drawable/button_fullwidth"
+        android:text="Scan Check Code"
+        android:textColor="@color/white" />
 
 </LinearLayout>

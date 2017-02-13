@@ -27,6 +27,9 @@
         android:id="@+id/buttonScan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Scan Vote Code" />
+        android:layout_marginTop="20sp"
+        android:background="@drawable/button_fullwidth"
+        android:text="Scan Vote Code"
+        android:textColor="@color/white" />
 
 </LinearLayout>
