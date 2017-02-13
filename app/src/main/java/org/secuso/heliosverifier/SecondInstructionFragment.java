@@ -23,7 +23,6 @@ public class SecondInstructionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_second, container, false);
-        container.removeAllViews();
 
         Button buttonScan = (Button) rootView.findViewById(R.id.buttonScan);
 
