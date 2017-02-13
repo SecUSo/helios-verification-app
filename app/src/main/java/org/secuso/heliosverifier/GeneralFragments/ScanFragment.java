@@ -1,10 +1,15 @@
 package org.secuso.heliosverifier.GeneralFragments;
 
+import android.Manifest;
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +26,8 @@ import org.secuso.heliosverifier.MainActivity;
 import org.secuso.heliosverifier.MyCaptureActivity;
 import org.secuso.heliosverifier.R;
 import org.secuso.heliosverifier.Utility.FragmentGenerator;
+
+import static android.os.Build.VERSION.SDK_INT;
 
 /**
  * Basis taken from https://github.com/SecUSo/privacy-friendly-qr-scanner
@@ -41,7 +48,7 @@ public class ScanFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        ImageView image = (ImageView)view.findViewById(R.id.imageView1);
+        ImageView image = (ImageView) view.findViewById(R.id.imageView1);
         image.setMinimumWidth(getResources().getDisplayMetrics().widthPixels);
         image.setMinimumHeight(getResources().getDisplayMetrics().widthPixels);
 
@@ -49,10 +56,17 @@ public class ScanFragment extends Fragment {
         scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (SDK_INT >= Build.VERSION_CODES.M) {
+                    if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA}, 0);
+                        return;
+                    }
+                }
                 scanFromFragment();
             }
-        });
 
+
+        });
         return view;
     }
 
@@ -67,7 +81,7 @@ public class ScanFragment extends Fragment {
     }
 
     private void displayToast() {
-        if(getActivity() != null && toast != null) {
+        if (getActivity() != null && toast != null) {
             Toast.makeText(getActivity(), toast, Toast.LENGTH_LONG).show();
             toast = null;
         }
@@ -76,11 +90,11 @@ public class ScanFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if(result != null) {
-            if(result.getContents() == null) {
+        if (result != null) {
+            if (result.getContents() == null) {
                 toast = getResources().getString(R.string.scan_aborted);
             } else {
-                ((MainActivity)getActivity()).switchToFragment(FragmentGenerator.getFragment(result),false);
+                ((MainActivity) getActivity()).switchToFragment(FragmentGenerator.getFragment(result), false);
             }
 
             // At this point we may or may not have a reference to the activity
