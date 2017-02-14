@@ -58,27 +58,27 @@ public class ResultFragment extends Fragment {
 
         switch (result) {
             case "01":
-                return "Candidate 1";
+                return getString(R.string.candidate_one);
             case "02":
-                return "Candidate 2";
+                return getString(R.string.candidate_two);
             case "03":
-                return "Candidate 3";
+                return getString(R.string.candidate_three);
             case "04":
-                return "Candidate 4";
+                return getString(R.string.candidate_four);
             case "05":
-                return "Candidate 5";
+                return getString(R.string.candidate_five);
             case "06":
-                return "Candidate 6";
+                return getString(R.string.candidate_six);
             case "07":
-                return "Candidate 7";
+                return getString(R.string.candidate_seven);
             case "08":
-                return "Candidate 8";
+                return getString(R.string.candidate_eight);
             case "09":
-                return "Candidate 9";
+                return getString(R.string.candidate_nine);
             case "10":
-                return "Candidate 10";
+                return getString(R.string.candidate_ten);
             default:
-                return "Empty Vote";
+                return getString(R.string.empty_vote);
         }
     }
 

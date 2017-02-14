@@ -34,4 +34,18 @@
     <string name="success_close_button">Close application</string>
     <string name="success_new_button">Start new verification</string>
 
+    <!--###CANDIDATE_LIST###-->
+    <string name="candidate_one">Candidate 1</string>
+    <string name="candidate_two">Candidate 2</string>
+    <string name="candidate_three">Candidate 3</string>
+    <string name="candidate_four">Candidate 4</string>
+    <string name="candidate_five">Candidate 5</string>
+    <string name="candidate_six">Candidate 6</string>
+    <string name="candidate_seven">Candidate 7</string>
+    <string name="candidate_eight">Candidate 8</string>
+    <string name="candidate_nine">Candidate 9</string>
+    <string name="candidate_ten">Candidate 10</string>
+    <string name="empty_vote">Empty Vote</string>
+
+
 </resources>
