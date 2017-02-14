@@ -5,6 +5,8 @@
     <string name="first_headline">Thanks for verifying your vote!</string>
     <string name="first_description">Start by scanning the QR Code representing your check code on the review page.</string>
     <string name="first_scan_button">Scan Check Code</string>
+    <string name="first_empty_qr_code">Result Not Found</string>
+    <string name="first_wrong_qr_code">You have scanned the wrong QR-Code.</string>
 
     <!--###SECOND###-->
     <string name="second_headline">The scanning of the check code was successful!</string>

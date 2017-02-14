@@ -40,10 +40,10 @@ public class FirstInstructionFragment extends Fragment {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
-                Toast.makeText(getActivity(), "Scan cancelled", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), getString(R.string.first_empty_qr_code), Toast.LENGTH_LONG).show();
             } else {
                 if (result.getContents().length() > 43) {
-                    Toast.makeText(getActivity(), "You have scanned the wrong QR-Code.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), getString(R.string.first_wrong_qr_code), Toast.LENGTH_LONG).show();
                 } else {
                     openNewFragment();
                 }
