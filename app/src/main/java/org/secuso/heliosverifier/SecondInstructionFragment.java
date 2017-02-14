@@ -47,19 +47,23 @@ public class SecondInstructionFragment extends Fragment {
             if (result.getContents() == null) {
                 Toast.makeText(getActivity(), "Result Not Found", Toast.LENGTH_LONG).show();
             } else {
-                Bundle bundle = new Bundle();
-                //Trim "encrypted" vote here
-                bundle.putString("code", result.getContents().substring(50, 52));
+                if (result.getContents().length() < 44) {
+                    Toast.makeText(getActivity(), "You have scanned the wrong QR-Code.", Toast.LENGTH_LONG).show();
+                } else {
+                    Bundle bundle = new Bundle();
+                    //Trim "encrypted" vote here
+                    bundle.putString("code", result.getContents().substring(50, 52));
 
-                Log.d("Code", result.getContents().substring(50, 52));
+                    Log.d("Code", result.getContents().substring(50, 52));
 
-                final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                ResultFragment resultFragment = new ResultFragment();
-                resultFragment.setArguments(bundle);
+                    final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                    ResultFragment resultFragment = new ResultFragment();
+                    resultFragment.setArguments(bundle);
 
-                fragmentTransaction.replace(R.id.activity_main, resultFragment, "ResultFragment");
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                    fragmentTransaction.replace(R.id.activity_main, resultFragment, "ResultFragment");
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
