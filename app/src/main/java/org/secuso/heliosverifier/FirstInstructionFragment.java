@@ -14,8 +14,6 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class FirstInstructionFragment extends Fragment {
 
-    private String toast;
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_first, container, false);
@@ -36,23 +34,19 @@ public class FirstInstructionFragment extends Fragment {
         IntentIntegrator.forSupportFragment(this).initiateScan();
     }
 
-    private void displayToast() {
-        if (getActivity() != null && toast != null) {
-            Toast.makeText(getActivity(), toast, Toast.LENGTH_LONG).show();
-            toast = null;
-        }
-    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
-                toast = "Scan cancelled";
-                displayToast();
+                Toast.makeText(getActivity(), "Scan cancelled", Toast.LENGTH_LONG).show();
             } else {
-                openNewFragment();
+                if (result.getContents().length() > 43) {
+                    Toast.makeText(getActivity(), "You have scanned the wrong QR-Code.", Toast.LENGTH_LONG).show();
+                } else {
+                    openNewFragment();
+                }
             }
         }
     }
