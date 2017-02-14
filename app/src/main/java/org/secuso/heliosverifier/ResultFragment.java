@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-/**
- * Created by yonjuni on 13.02.17.
- */
 
 public class ResultFragment extends Fragment {
 
