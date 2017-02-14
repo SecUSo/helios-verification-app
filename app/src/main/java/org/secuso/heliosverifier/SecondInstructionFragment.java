@@ -41,10 +41,10 @@ public class SecondInstructionFragment extends Fragment {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
-                Toast.makeText(getActivity(), "Result Not Found", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), getString(R.string.second_empty_qr_code), Toast.LENGTH_LONG).show();
             } else {
                 if (result.getContents().length() < 44) {
-                    Toast.makeText(getActivity(), "You have scanned the wrong QR-Code.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), getString(R.string.second_wrong_qr_code), Toast.LENGTH_LONG).show();
                 } else {
                     Bundle bundle = new Bundle();
                     //Trim "encrypted" vote here

@@ -11,6 +11,8 @@
     <string name="second_description">Proceed by choosing the verification option on the review page.</string>
     <string name="second_description2">Follow the instructions on the voting website.</string>
     <string name="second_scan_button">Scan Vote Code</string>
+    <string name="second_empty_qr_code">Result Not Found</string>
+    <string name="second_wrong_qr_code">You have scanned the wrong QR-Code.</string>
 
     <!--###RESULT###-->
     <string name="result_alarm_button">I did not vote for this candidate</string>
