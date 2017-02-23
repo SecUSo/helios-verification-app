@@ -56,7 +56,7 @@
     <string name="candidate_19">MLPD</string>
     <string name="candidate_20">PBC</string>
     <string name="candidate_21">BIG</string>
-    <string name="empty_vote">Empty Vote</string>
+    <string name="empty_vote">Invalid Vote</string>
 
 
 </resources>
