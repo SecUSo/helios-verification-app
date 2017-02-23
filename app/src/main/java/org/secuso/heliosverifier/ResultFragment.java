@@ -77,6 +77,28 @@ public class ResultFragment extends Fragment {
                 return getString(R.string.candidate_nine);
             case "10":
                 return getString(R.string.candidate_ten);
+            case "11":
+                return getString(R.string.candidate_11);
+            case "12":
+                return getString(R.string.candidate_12);
+            case "13":
+                return getString(R.string.candidate_13);
+            case "14":
+                return getString(R.string.candidate_14);
+            case "15":
+                return getString(R.string.candidate_15);
+            case "16":
+                return getString(R.string.candidate_16);
+            case "17":
+                return getString(R.string.candidate_17);
+            case "18":
+                return getString(R.string.candidate_18);
+            case "19":
+                return getString(R.string.candidate_19);
+            case "20":
+                return getString(R.string.candidate_20);
+            case "21":
+                return getString(R.string.candidate_21);
             default:
                 return getString(R.string.empty_vote);
         }
