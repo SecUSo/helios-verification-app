@@ -35,16 +35,27 @@
     <string name="success_new_button">Start new verification</string>
 
     <!--###CANDIDATE_LIST###-->
-    <string name="candidate_one">Candidate 1</string>
-    <string name="candidate_two">Candidate 2</string>
-    <string name="candidate_three">Candidate 3</string>
-    <string name="candidate_four">Candidate 4</string>
-    <string name="candidate_five">Candidate 5</string>
-    <string name="candidate_six">Candidate 6</string>
-    <string name="candidate_seven">Candidate 7</string>
-    <string name="candidate_eight">Candidate 8</string>
-    <string name="candidate_nine">Candidate 9</string>
-    <string name="candidate_ten">Candidate 10</string>
+    <string name="candidate_one">CDU</string>
+    <string name="candidate_two">SPD</string>
+    <string name="candidate_three">DIE LINKE</string>
+    <string name="candidate_four">GRÜNE</string>
+    <string name="candidate_five">CSU</string>
+    <string name="candidate_six">FDP</string>
+    <string name="candidate_seven">AFD</string>
+    <string name="candidate_eight">PIRATEN</string>
+    <string name="candidate_nine">FREIE WÄHLER</string>
+    <string name="candidate_ten">NPD</string>
+    <string name="candidate_11">TIERSCHUTZPARTEI</string>
+    <string name="candidate_12">ÖDP</string>
+    <string name="candidate_13">REP</string>
+    <string name="candidate_14">DIE PARTEI</string>
+    <string name="candidate_15">PRO DEUTSCHLAND</string>
+    <string name="candidate_16">BP</string>
+    <string name="candidate_17">Volksabstimmung</string>
+    <string name="candidate_18">PDV</string>
+    <string name="candidate_19">MLPD</string>
+    <string name="candidate_20">PBC</string>
+    <string name="candidate_21">BIG</string>
     <string name="empty_vote">Empty Vote</string>
 
 
