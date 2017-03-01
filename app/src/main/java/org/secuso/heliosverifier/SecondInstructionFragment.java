@@ -48,9 +48,9 @@ public class SecondInstructionFragment extends Fragment {
                 } else {
                     Bundle bundle = new Bundle();
                     //Trim "encrypted" vote here
-                    bundle.putString("code", result.getContents().substring(50, 52));
+                    bundle.putString("code", result.getContents().substring(100, 102));
 
-                    Log.d("Code", result.getContents().substring(50, 52));
+                    Log.d("Code", result.getContents().substring(100, 102));
 
                     final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                     ResultFragment resultFragment = new ResultFragment();
