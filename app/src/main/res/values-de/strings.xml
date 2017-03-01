@@ -9,7 +9,7 @@
     <string name="first_wrong_qr_code">Sie haben den falschen QR-Code gescannt.</string>
 
     <!--###SECOND###-->
-    <string name="second_headline">Das Scannen des Prüf-Code war erfolgreich!</string>
+    <string name="second_headline">Das Scannen des Prüf-Codes war erfolgreich!</string>
     <string name="second_description">Bitte wählen Sie "Verifizieren" auf der Überprüfungsseite aus.</string>
     <string name="second_description2">Folgen Sie dann den Instruktionen auf der Webseite.</string>
     <string name="second_scan_button">Stimmzettel-Code scannen</string>
@@ -57,5 +57,5 @@
     <string name="candidate_20">PBC</string>
     <string name="candidate_21">BIG</string>
     <string name="empty_vote">Ungültige Stimme</string>
-    
+
 </resources>
