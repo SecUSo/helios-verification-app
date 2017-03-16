@@ -1,61 +1,60 @@
 <resources>
-    <string name="app_name">Helios Verifizierungsapp</string>
+    <string name="app_name">Bundestagswahlüberprüfung</string>
 
     <!--###FIRST###-->
-    <string name="first_headline">Vielen Dank für das Verifizieren Ihrer Stimme!</string>
-    <string name="first_description">Bitte scannen Sie den QR-Code, der den Prüf-Code enthält auf der Übrprüfungsseite.</string>
+    <string name="first_headline">Vielen Dank, dass Sie Ihre Stimme überprüfen möchten!</string>
+    <string name="first_description">Bitte scannen Sie den QR-Code, der den Prüf-Code enthält auf der Überprüfungsseite.</string>
     <string name="first_scan_button">Prüf-Code scannen</string>
     <string name="first_empty_qr_code">Der QR-Code ist leer</string>
     <string name="first_wrong_qr_code">Sie haben den falschen QR-Code gescannt.</string>
 
     <!--###SECOND###-->
     <string name="second_headline">Das Scannen des Prüf-Codes war erfolgreich!</string>
-    <string name="second_description">Bitte wählen Sie "Verifizieren" auf der Überprüfungsseite aus.</string>
+    <string name="second_description">Bitte wählen Sie "Überprüfen" auf der Überprüfungsseite aus.</string>
     <string name="second_description2">Folgen Sie dann den Instruktionen auf der Webseite.</string>
     <string name="second_scan_button">Stimmzettel-Code scannen</string>
     <string name="second_empty_qr_code">Der QR-Code ist leer</string>
     <string name="second_wrong_qr_code">Sie haben den falschen QR-Code gescannt.</string>
 
     <!--###RESULT###-->
-    <string name="result_alarm_button">Ich habe diesen Kandidaten nicht gewählt</string>
-    <string name="result_success_button">Ich habe diesen Kandidaten gewählt</string>
+    <string name="result_alarm_button">Ich habe diese Partei nicht angekreuzt</string>
+    <string name="result_success_button">Ich habe diese Partei angekreuzt</string>
     <string name="result_candidate_placeholder">Ungültige Stimme</string>
-    <string name="result_heading">Alles funktioniert richtig, wenn Sie folgenden Kandidaten gewählt haben:</string>
+    <string name="result_heading">Alles funktioniert richtig, wenn Sie folgende Partei angekreuzt haben:</string>
 
     <!--###ALARM###-->
-    <string name="alarm_heading">Die Verifikation hat ein Problem aufgedeckt!</string>
+    <string name="alarm_heading">Die Überprüfung hat ein Problem aufgedeckt!</string>
     <string name="alarm_hint">Bitte rufen Sie den Versuchsleiter.</string>
     <string name="alarm_close_button">App schließen</string>
-    <string name="alarm_new_button">Neue Verification starten</string>
+    <string name="alarm_new_button">Neue Überprüfung starten</string>
 
     <!--###SUCCESS###-->
-    <string name="success_heading">Die Verification war erfolgreich!</string>
+    <string name="success_heading">Die Überprüfung war erfolgreich!</string>
     <string name="success_description">Bitte folgen Sie den Instruktionen auf der Webseite.</string>
     <string name="success_close_button">App schließen</string>
-    <string name="success_new_button">Neue Verification starten</string>
+    <string name="success_new_button">Neue Überprüfung starten</string>
 
     <!--###CANDIDATE_LIST###-->
     <string name="candidate_one">CDU</string>
     <string name="candidate_two">SPD</string>
     <string name="candidate_three">DIE LINKE</string>
     <string name="candidate_four">GRÜNE</string>
-    <string name="candidate_five">CSU</string>
-    <string name="candidate_six">FDP</string>
-    <string name="candidate_seven">AFD</string>
-    <string name="candidate_eight">PIRATEN</string>
-    <string name="candidate_nine">FREIE WÄHLER</string>
-    <string name="candidate_ten">NPD</string>
-    <string name="candidate_11">TIERSCHUTZPARTEI</string>
-    <string name="candidate_12">ÖDP</string>
-    <string name="candidate_13">REP</string>
-    <string name="candidate_14">DIE PARTEI</string>
-    <string name="candidate_15">PRO DEUTSCHLAND</string>
-    <string name="candidate_16">BP</string>
-    <string name="candidate_17">Volksabstimmung</string>
-    <string name="candidate_18">PDV</string>
-    <string name="candidate_19">MLPD</string>
-    <string name="candidate_20">PBC</string>
-    <string name="candidate_21">BIG</string>
+    <string name="candidate_five">FDP</string>
+    <string name="candidate_six">AFD</string>
+    <string name="candidate_seven">PIRATEN</string>
+    <string name="candidate_eight">FREIE WÄHLER</string>
+    <string name="candidate_nine">NPD</string>
+    <string name="candidate_10">TIERSCHUTZPARTEI</string>
+    <string name="candidate_11">ÖDP</string>
+    <string name="candidate_12">REP</string>
+    <string name="candidate_13">DIE PARTEI</string>
+    <string name="candidate_14">PRO DEUTSCHLAND</string>
+    <string name="candidate_15">BP</string>
+    <string name="candidate_16">Volksabstimmung</string>
+    <string name="candidate_17">PDV</string>
+    <string name="candidate_18">MLPD</string>
+    <string name="candidate_19">PBC</string>
+    <string name="candidate_20">BIG</string>
     <string name="empty_vote">Ungültige Stimme</string>
 
 </resources>

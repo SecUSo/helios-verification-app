@@ -97,8 +97,6 @@ public class ResultFragment extends Fragment {
                 return getString(R.string.candidate_19);
             case "20":
                 return getString(R.string.candidate_20);
-            case "21":
-                return getString(R.string.candidate_21);
             default:
                 return getString(R.string.empty_vote);
         }
