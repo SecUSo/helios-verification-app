@@ -11,8 +11,8 @@
 
     <!--###SECOND###-->
     <string name="second_headline">Das Scannen des Prüf-Codes war erfolgreich!</string>
-    <string name="second_description">Bitte wählen Sie "Überprüfen" auf der Überprüfungsseite aus.</string>
-    <string name="second_description2">Folgen Sie dann den Instruktionen auf der Webseite.</string>
+    <string name="second_description">Bitte wählen Sie "Überprüfen" auf der Webseite aus.</string>
+    <string name="second_description2">Scannen Sie dann den angezeigten QR-Code.</string>
     <string name="second_scan_button">Stimmzettel-Code scannen</string>
     <string name="second_empty_qr_code">Der QR-Code ist leer</string>
     <string name="second_wrong_qr_code">Sie haben den falschen QR-Code gescannt.</string>
