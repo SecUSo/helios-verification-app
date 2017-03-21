@@ -42,7 +42,7 @@ public class FirstInstructionFragment extends Fragment {
             if (result.getContents() == null) {
                 Toast.makeText(getActivity(), getString(R.string.first_empty_qr_code), Toast.LENGTH_LONG).show();
             } else {
-                if (result.getContents().length() > 43) {
+                if (result.getContents().length() > 53) {
                     Toast.makeText(getActivity(), getString(R.string.first_wrong_qr_code), Toast.LENGTH_LONG).show();
                 } else {
                     openNewFragment();
