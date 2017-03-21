@@ -7,6 +7,7 @@
     <string name="first_scan_button">Prüf-Code scannen</string>
     <string name="first_empty_qr_code">Der QR-Code ist leer</string>
     <string name="first_wrong_qr_code">Sie haben den falschen QR-Code gescannt.</string>
+    <string name="first_wrong_qr_code_hint">Wenn Sie den falschen QR-Code gescannt haben, lesen Sie die Instruktionen auf der Webseite.</string>
 
     <!--###SECOND###-->
     <string name="second_headline">Das Scannen des Prüf-Codes war erfolgreich!</string>

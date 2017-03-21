@@ -7,6 +7,8 @@
     <string name="first_scan_button">Scan Check Code</string>
     <string name="first_empty_qr_code">Result Not Found</string>
     <string name="first_wrong_qr_code">You have scanned the wrong QR-Code.</string>
+    <string name="first_wrong_qr_code_hint">If you have scanned the wrong QR Code, read the instructions on the website.</string>
+
 
     <!--###SECOND###-->
     <string name="second_headline">The scanning of the check code was successful!</string>
