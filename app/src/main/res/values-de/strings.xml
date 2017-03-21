@@ -21,7 +21,8 @@
     <string name="result_alarm_button">Ich habe diese Partei nicht angekreuzt</string>
     <string name="result_success_button">Ich habe diese Partei angekreuzt</string>
     <string name="result_candidate_placeholder">Ungültige Stimme</string>
-    <string name="result_heading">Alles funktioniert richtig, wenn Sie folgende Partei angekreuzt haben:</string>
+    <string name="result_heading">Wenn die von Ihnen angekreuzte Partei </string>
+    <string name="result_heading2">ist, hat die Verschlüsselung korrekt funktioniert.</string>
 
     <!--###ALARM###-->
     <string name="alarm_heading">Die Überprüfung hat ein Problem aufgedeckt!</string>
