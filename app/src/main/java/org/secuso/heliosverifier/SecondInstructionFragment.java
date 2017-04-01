@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -39,12 +40,15 @@ public class SecondInstructionFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        Log.d("Length", String.valueOf(result.getContents().length()));
         if (result != null) {
             if (result.getContents() == null) {
                 Toast.makeText(getActivity(), getString(R.string.second_empty_qr_code), Toast.LENGTH_LONG).show();
             } else {
-                if (result.getContents().length() < 44) {
+                if (result.getContents().length() < 54) {
                     Toast.makeText(getActivity(), getString(R.string.second_wrong_qr_code), Toast.LENGTH_LONG).show();
+                    TextView textView = (TextView) getActivity().findViewById(R.id.wrong_qr2);
+                    textView.setVisibility(View.VISIBLE);
                 } else {
                     Bundle bundle = new Bundle();
                     //Trim "encrypted" vote here

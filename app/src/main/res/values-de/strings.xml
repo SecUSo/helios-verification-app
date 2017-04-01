@@ -16,6 +16,7 @@
     <string name="second_scan_button">Stimmzettel-Code scannen</string>
     <string name="second_empty_qr_code">Der QR-Code ist leer</string>
     <string name="second_wrong_qr_code">Sie haben den falschen QR-Code gescannt.</string>
+    <string name="second_wrong_qr_code_hint">Sie haben den falschen QR-Code gescannt. Bitte wählen Sie "Überprüfung" auf der Webseite und scannen Sie anschließend den QR-Code.</string>
 
     <!--###RESULT###-->
     <string name="result_alarm_button">Ich habe diese Partei nicht angekreuzt</string>

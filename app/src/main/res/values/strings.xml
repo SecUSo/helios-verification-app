@@ -17,6 +17,7 @@
     <string name="second_scan_button">Scan Ballot-Code</string>
     <string name="second_empty_qr_code">Result Not Found</string>
     <string name="second_wrong_qr_code">You have scanned the wrong QR-Code.</string>
+    <string name="second_wrong_qr_code_hint">If you have scanned the wrong QR-Code, please choose "start checking" on the website and scan the QR-Code there.</string>
 
     <!--###RESULT###-->
     <string name="result_alarm_button">I have not voted for this candidate</string>
