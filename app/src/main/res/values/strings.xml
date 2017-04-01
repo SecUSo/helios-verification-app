@@ -2,36 +2,37 @@
     <string name="app_name">Helios Verifier</string>
 
     <!--###FIRST###-->
-    <string name="first_headline">Thanks for verifying your vote!</string>
-    <string name="first_description">Start by scanning the QR Code representing your check code on the review page.</string>
-    <string name="first_scan_button">Scan Check Code</string>
+    <string name="first_headline">Thanks you that you wish to check your vote!</string>
+    <string name="first_description">Start by scanning the QR-Code representing your Check-Code on the review page.</string>
+    <string name="first_scan_button">Scan Check-Code</string>
     <string name="first_empty_qr_code">Result Not Found</string>
     <string name="first_wrong_qr_code">You have scanned the wrong QR-Code.</string>
-    <string name="first_wrong_qr_code_hint">If you have scanned the wrong QR Code, read the instructions on the website.</string>
+    <string name="first_wrong_qr_code_hint">If you have scanned the wrong QR-Code, please read the instructions on the website.</string>
 
 
     <!--###SECOND###-->
-    <string name="second_headline">The scanning of the check code was successful!</string>
-    <string name="second_description">Proceed by choosing the verification option on the review page.</string>
-    <string name="second_description2">Follow the instructions on the voting website.</string>
-    <string name="second_scan_button">Scan Vote Code</string>
+    <string name="second_headline">The scanning of the Check-Code was successful!</string>
+    <string name="second_description">Please choose "start checking" on the website.</string>
+    <string name="second_description2">Than scan the displayed QR-Code.</string>
+    <string name="second_scan_button">Scan Ballot-Code</string>
     <string name="second_empty_qr_code">Result Not Found</string>
     <string name="second_wrong_qr_code">You have scanned the wrong QR-Code.</string>
 
     <!--###RESULT###-->
-    <string name="result_alarm_button">I did not vote for this candidate</string>
+    <string name="result_alarm_button">I have not voted for this candidate</string>
     <string name="result_success_button">I have voted for this candidate</string>
     <string name="result_candidate_placeholder">No Candidate</string>
-    <string name="result_heading">Everything has worked perfectly in case you have voted for:</string>
+    <string name="result_heading">In case you have voted for</string>
+    <string name="result_heading2">your vote was encrypted correctly.</string>
 
     <!--###ALARM###-->
-    <string name="alarm_heading">The verification uncovered a problem!</string>
+    <string name="alarm_heading">The checking process uncovered a problem!</string>
     <string name="alarm_hint">Please notify the examiner.</string>
     <string name="alarm_close_button">Close application</string>
     <string name="alarm_new_button">Start new verification</string>
 
     <!--###SUCCESS###-->
-    <string name="success_heading">The verification was successful!</string>
+    <string name="success_heading">The checking process was successful!</string>
     <string name="success_description">Please follow the instructions at the voting website.</string>
     <string name="success_close_button">Close application</string>
     <string name="success_new_button">Start new verification</string>
