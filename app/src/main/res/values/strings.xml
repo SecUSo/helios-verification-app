@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Helios Verifier</string>
+    <string name="app_name">Election Checking</string>
 
     <!--###FIRST###-->
-    <string name="first_headline">Thanks you that you wish to check your vote!</string>
+    <string name="first_headline">Thank you for wanting to check your vote!</string>
     <string name="first_description">Start by scanning the QR-Code representing your Check-Code on the review page.</string>
     <string name="first_scan_button">Scan Check-Code</string>
     <string name="first_empty_qr_code">Result Not Found</string>
@@ -11,8 +11,8 @@
 
 
     <!--###SECOND###-->
-    <string name="second_headline">The scanning of the Check-Code was successful!</string>
-    <string name="second_description">Please choose "start checking" on the website.</string>
+    <string name="second_headline">The scanning of the check-code was successful!</string>
+    <string name="second_description">Please choose \"start checking\" on the voting website.</string>
     <string name="second_description2">Than scan the displayed QR-Code.</string>
     <string name="second_scan_button">Scan Ballot-Code</string>
     <string name="second_empty_qr_code">Result Not Found</string>
