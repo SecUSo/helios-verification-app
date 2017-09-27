@@ -1,8 +1,7 @@
-## Helios Verification App
+## Verification App
 
-This project belongs to a collection of prototypes for the remote electronic voting protocol Helios that I used for a user study in my master thesis.
-The app's purpose is to assist a user in cast-as-intended verification. 
-To do so the app needs QR-code from the voting software [Helios Usability Study](https://github.com/SecUSo/helios-usability-study)
+This project belongs to a collection of prototypes for cast-as-intended verification with the Benaloh Challenge that I used for a user study in my master thesis. The app's purpose is to assist a user in cast-as-intended verification. 
+To do so the app needs QR-code from the voting website [Helios Usability Study](https://github.com/SecUSo/helios-usability-study)
 Be aware that this software is a prototype for evaluation. Encryption is only simulated and thus we do not recomment to use this interface for serious elections as secrecy can be broken easily.
 
 ## Building 
